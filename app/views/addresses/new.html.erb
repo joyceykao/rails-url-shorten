@@ -1,13 +1,13 @@
 <div class="container">
 <p>Put the complete URL address below and add your short word that will be part of the shorter link.</p>
-<p>'Shortened' link will look like: <%= request.base_url  %>/go/<i>your-short-word</i></p>
-
+<p>'Shortened' link will look like: <%= request.base_url  %>/go/<i>your-short-suffix</i></p>
+<p> If you leave the short suffix blank, a random one will be generated for you.  </p>
   <%= simple_form_for(@address) do |f| %>
     <div class="form-inputs">
       <%= f.input :url, label: 'Target URL'%>
     </div>
     <div class="form-inputs">
-      <%= f.input :short, label: "Short word suffix", hint: "only letters and numbers, folks. If left blank, you'll get a random short." %>
+      <%= f.input :short, label: "Short suffix", hint: "Only letters and numbers here, folks. If left blank, you'll get a random numerical suffix." %>
     </div>
      <div class="form-actions btn btn-primary mt-4">
       <%= f.button :submit %>
