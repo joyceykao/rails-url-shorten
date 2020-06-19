@@ -1,9 +1,9 @@
+<div class="container">
 <h1>URLs and short URLs</h1>
-
 <table>
   <tr>
-    <th>Long</th>
-    <th>Short</th>
+    <th>Original URL</th>
+    <th>Custom shortened URL</th>
   </tr>
   <% @addresses.each do |address| %>
   <tr>
@@ -12,6 +12,6 @@
   </tr>
   <% end %>
 </table>
+<%= link_to 'Get new short link', new_address_path, class: 'btn btn-primary mt-3' %>
+</div>
 
-
- <%= link_to 'Get new short link', new_address_path, class: 'btn btn-primary mt-3' %>
