@@ -1,1 +1,14 @@
-index.html.erb
+<h1>URLs and short URLs</h1>
+
+<table>
+  <tr>
+    <th>Long</th>
+    <th>Short</th>
+  </tr>
+  <% @addresses.each do |address| %>
+  <tr>
+    <td><%= address.url  %></td>
+    <td><%= address.short  %> </td>
+  </tr>
+  <% end %>
+</table>
