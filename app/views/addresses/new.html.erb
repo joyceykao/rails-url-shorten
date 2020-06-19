@@ -7,7 +7,7 @@
       <%= f.input :url, label: 'Target URL'%>
     </div>
     <div class="form-inputs">
-      <%= f.input :short, label: "Short word suffix"%>
+      <%= f.input :short, label: "Short word suffix", hint: "only letters and numbers, folks. If left blank, you'll get a random short." %>
     </div>
      <div class="form-actions btn btn-primary mt-4">
       <%= f.button :submit %>
