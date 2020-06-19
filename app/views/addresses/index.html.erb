@@ -8,7 +8,7 @@
   <% @addresses.each do |address| %>
   <tr>
     <td><%= address.url  %></td>
-    <td>https://littlejk.herokuapp.com/go/<%= address.short  %> </td>
+    <td><%= request.base_url %>/go/<%= address.short  %> </td>
   </tr>
   <% end %>
 </table>
