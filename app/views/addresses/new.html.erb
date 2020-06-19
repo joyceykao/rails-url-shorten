@@ -1,7 +1,11 @@
-<%= form_for(@address) do |f| %>
-  <%= f.label :url %>
-  <%= f.text_field :url %>
-  <%= f.label :short %>
-  <%= f.text_field :short %>
-  <%= f.submit %>
-<% end %>
+<p>Put the complete URL address below and add your short word that will be part of the shorter link.</p>
+<p>New link will look like: https://littlejk.herokuapp.com/go/<i>your-short-word</i></p>
+<div class="container">
+  <%= form_for(@address) do |f| %>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <%= f.label :short %>
+    <%= f.text_field :short %>
+    <%= f.submit %>
+  <% end %>
+</div>
