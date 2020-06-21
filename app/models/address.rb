@@ -9,6 +9,6 @@ class Address < ApplicationRecord
   before_validation :random_short
 
   def random_short
-    self.short = (rand*100000).ceil.to_s if self.short.nil? || self.short.empty?
+    self.short = SecureRandom.alphanumeric(8) if self.short.nil? || self.short.empty?
   end
 end
