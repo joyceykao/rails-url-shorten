@@ -5,7 +5,7 @@ class AddressesController < ApplicationController
 
   def show
     @address = Address.find_by_short(params[:short])
-    if @address.nil? || @address.empty?
+    if @address.nil?
       render_404
     else
       redirect_to @address.url
